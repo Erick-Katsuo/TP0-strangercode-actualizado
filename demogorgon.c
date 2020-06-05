@@ -55,22 +55,21 @@ void comenzar_enfrentamiento(){
 
 
 int recibir_animo(){
-    int animo_recibido = DEF_ANIMO;
+	int animo_recibido = DEF_ANIMO;
+	do{
 
-	while ((animo_recibido <1) || (animo_recibido>100)){
-   
-    	printf (MSJ_RECIBIR_ANIMO);
-    	scanf("%i", &animo_recibido);
-    
-    	if (animo_recibido <1) || (animo_recibido>100){
-    		printf(MSJ_MAL_INGRESO);
-    	}
-    	else{
-      		printf("Ingreso Aceptado\n");
-    	}
-    }
+		printf(MSJ_RECIBIR_ANIMO);
+		scanf("%i", &animo_recibido);
 
-    return animo_recibido;
+		if( (animo_recibido < 1) || (animo_recibido > 100) ){
+			printf(MSJ_MAL_INGRESO);
+		}else{
+			printf("Ingreso aceptado\n"); 
+		}
+
+	}while(  (animo_recibido < 1) || (animo_recibido > 100)  );
+
+	return animo_recibido;
 }
 
 /*
