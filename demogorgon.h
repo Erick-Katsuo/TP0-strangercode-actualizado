@@ -19,11 +19,11 @@ void comenzar_enfrentamiento();
 int recibir_animo();
 
 
-/*Pre: "animo_recibido" debe corresponder al tipo de dato int.
- *Post: Devuelve "ANIMO_VERIFICADO" si el valor de "animo_recibido" se encuentra 
+/*Pre: "animo_verificar" debe corresponder al tipo de dato int.
+ *Post: Devuelve "ANIMO_VERIFICADO" si el valor de "animo_verificar" se encuentra 
  *	   	entre MIN_ANIMO y MAX_ANIMO, caso contrario devuelve "ANIMO_NO_VERIFICADO".
 */
-bool verificar_animo_recib(int animo_recibido);
+bool verificar_animo(int animo_verificar);
 
 
 /*Pre: -.
@@ -37,7 +37,7 @@ char recibir_confianza();
  *Post: Devuelve "NIVEL_CONFIANZA_VERF" si el valor de "confianza_recibida" se encuentra 
  *	   	entre los niveles considerados, caso contrario devuelve "NIVEL_CONFIANZA_NO_VERF".
 */
-bool verificar_nivel_confianza_recib(char confianza_recibida);
+bool verificar_nivel_confianza_recib(char confianza_verificar);
 
 
 /*Pre: "nivel_animo" y "nivel_confianza" con correspondientes valores verificados.
@@ -48,6 +48,7 @@ float recibir_fuerza_psiquica(int nivel_animo, char nivel_confianza);
 
 /*Pre: "nivel_animo" con valor verificado y "multiplicador_confianza" correspondiente al "nivel_confianza".
  *Post: Calcula la fuerza psiquica de Eleven con los valores actuales de "nivel_animo" y "multiplicador_confianza".
+ * 		Devuelve el resultado de multiplicar "nivel_animo" y "multiplicador_confianza".
 */
 float calcular_fuerza(int nivel_animo, float multiplicador_confianza);
 
